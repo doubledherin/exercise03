@@ -25,7 +25,7 @@ def main():
         print arithmetic.divide(first, second)
 
 # revise square input
-    #if question_list[0] == "**2" or "square":
+    #if question_list[0] == "**2" or question_list[0] == "square":
     #    return arithmetic.square(first, second)    
 
 # revise for cube input
@@ -35,7 +35,7 @@ def main():
     if question_list[0] == "**":
         print arithmetic.power(first, second)
 
-    if question_list[0] == "%" or "mod":
+    if question_list[0] == "%" or question_list[0] == "mod":
         print arithmetic.mod(first, second)
 
 if __name__ == '__main__':
