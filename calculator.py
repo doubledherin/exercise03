@@ -13,6 +13,13 @@ def main():
     while question_list[0] != "q":
 
         question = raw_input("> ")
+# TO DO
+# question != "q" enables ability to quit, but removes ability to do math
+# removing question != "q" stops text from being entered but results in user can't quit
+        if question.isdigit() == False and question != "q":
+            print "That's dumb."
+            continue
+
         question_list = question.split()
         question_list.extend([0, 0])
     
