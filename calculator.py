@@ -10,7 +10,7 @@ def main():
     question = raw_input("> ")
     question_list = question.split()
     question_list.append(0)
-    print question_list
+    
     first = int(question_list[1])
     second = int(question_list[2])
 
@@ -29,9 +29,8 @@ def main():
     if question_list[0] == "**2" or question_list[0] == "square":
         print arithmetic.square(first)    
 
-# revise for cube input
-    #if question_list[0] == "":
-    #    print arithmetic.cube(first)
+    if question_list[0] == "**3" or question_list[0] == "cube":
+        print arithmetic.cube(first)
 
     if question_list[0] == "pow":
         print arithmetic.power(first, second)
