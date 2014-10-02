@@ -7,36 +7,41 @@ calculator program yourself in this file.
 import arithmetic
 
 def main():
-    question = raw_input("> ")
-    question_list = question.split()
-    question_list.append(0)
+
+    question_list = ["num"]
+
+    while question_list[0] != "q":
+
+        question = raw_input("> ")
+        question_list = question.split()
+        question_list.extend([0, 0])
     
-    first = int(question_list[1])
-    second = int(question_list[2])
+        first = int(question_list[1])
+        second = int(question_list[2])
 
-    if question_list[0] == "+":
-        print arithmetic.add(first, second)
+        if question_list[0] == "+":
+            print arithmetic.add(first, second)
 
-    if question_list[0] == "-":
-        print arithmetic.subtract(first, second)
+        if question_list[0] == "-":
+            print arithmetic.subtract(first, second)
 
-    if question_list[0] == "*":
-        print arithmetic.multiply(first, second)
+        if question_list[0] == "*":
+            print arithmetic.multiply(first, second)
 
-    if question_list[0] == "/":
-        print arithmetic.divide(first, second)
+        if question_list[0] == "/":
+            print arithmetic.divide(first, second)
 
-    if question_list[0] == "**2" or question_list[0] == "square":
-        print arithmetic.square(first)    
+        if question_list[0] == "**2" or question_list[0] == "square":
+            print arithmetic.square(first)    
 
-    if question_list[0] == "**3" or question_list[0] == "cube":
-        print arithmetic.cube(first)
+        if question_list[0] == "**3" or question_list[0] == "cube":
+            print arithmetic.cube(first)
 
-    if question_list[0] == "pow":
-        print arithmetic.power(first, second)
+        if question_list[0] == "pow":
+            print arithmetic.power(first, second)
 
-    if question_list[0] == "%" or question_list[0] == "mod":
-        print arithmetic.mod(first, second)
+        if question_list[0] == "%" or question_list[0] == "mod":
+            print arithmetic.mod(first, second)
 
 if __name__ == '__main__':
     main()
